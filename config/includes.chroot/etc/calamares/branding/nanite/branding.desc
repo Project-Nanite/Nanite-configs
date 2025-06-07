@@ -1,0 +1,24 @@
+componentName: nanite
+
+strings:
+    productName: "Nanite Linux"
+    shortProductName: "Nanite"
+    version: "1.0"
+    shortVersion: "1.0"
+    versionedName: "Nanite Linux 1.0"
+    shortVersionedName: "Nanite 1.0"
+    bootloaderEntryName: "Nanite"
+    productUrl: "https://nanite-linux.org/"
+    supportUrl: "https://nanite-linux.org/support"
+    knownIssuesUrl: "https://nanite-linux.org/issues"
+    releaseNotesUrl: "https://nanite-linux.org/releases"
+
+images:
+    productLogo: "nanite-logo.png"
+    productIcon: "nanite-icon.png"
+    productWelcome: "nanite-welcome.png"
+
+style:
+    sidebarBackground: "#2c3e50"
+    sidebarText: "#ffffff"
+    sidebarTextSelect: "#4d7cf4"

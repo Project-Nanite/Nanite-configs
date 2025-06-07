@@ -71,16 +71,16 @@ LB_HDD_SIZE="auto"
 LB_HDD_PARTITION_START=""
 
 # Set iso author
-LB_ISO_APPLICATION="Fusion Flux AI/ML Distribution"
+LB_ISO_APPLICATION="Nanite AI/ML Distribution"
 
 # Set iso preparer
 LB_ISO_PREPARER="live-build @LB_VERSION@; https://salsa.debian.org/live-team/live-build"
 
 # Set iso publisher
-LB_ISO_PUBLISHER="Fusion Flux"
+LB_ISO_PUBLISHER="Nanite Linux"
 
 # Set iso volume (max 32 chars)
-LB_ISO_VOLUME="Fusion Flux Installer"
+LB_ISO_VOLUME="Nanite Installer"
 
 # Set jffs2 eraseblock size
 LB_JFFS2_ERASEBLOCK=""

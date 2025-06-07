@@ -10,9 +10,9 @@ lb config noauto \
     --bootloader grub-efi \
     --bootloader grub-pc \
     --linux-flavours amd64 \
-    --iso-publisher "Fusion Flux" \
-    --iso-volume "Fusion Flux Installer" \
-    --iso-application "Fusion Flux AI/ML Distribution" \
+    --iso-publisher "Nanite Linux" \
+    --iso-volume "Nanite Installer" \
+    --iso-application "Nanite AI/ML Distribution" \
     --apt-indices false \
     --firmware-binary true \
     --firmware-chroot true \

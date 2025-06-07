@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=About Nanite
+Comment=Information about Nanite Linux
+Exec=zenity --info --title="About Nanite Linux" --text="Nanite Linux 1.0\nA modern, lightweight Linux distribution\n\nWebsite: https://nanite.software"
+Icon=nanite-logo
+Terminal=false
+Categories=System;

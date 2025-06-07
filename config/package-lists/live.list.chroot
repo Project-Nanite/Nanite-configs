@@ -3,27 +3,35 @@ live-config
 live-config-systemd
 systemd-sysv
 
+# XFCE Desktop Environment
+xfce4
+xfce4-goodies
+xfce4-terminal
+thunar
+thunar-volman
+thunar-archive-plugin
+
+# Display Manager
+lightdm
+lightdm-gtk-greeter
+
+# System Installer
 calamares
 calamares-settings-debian
-                            
-awesome
-dmenu
-terminator
-thunar
-nitrogen
-lightdm
 
-awesome-extra
-rofi
-compton
-feh
-lxappearance
-
-grub-pc
-
+# Network Management
 network-manager
 network-manager-gnome
 
-bluez 
-pulseaudio-module-bluetooth
+# Audio
+pulseaudio
+pavucontrol
 
+# Bootloader
+grub-pc
+
+# Essential utilities
+firefox-esr
+file-roller
+mousepad
+ristretto
