@@ -7,6 +7,7 @@ systemd-sysv
 xfce4
 xfce4-goodies
 xfce4-terminal
+xfce4-whiskermenu-plugin
 thunar
 thunar-volman
 thunar-archive-plugin
@@ -35,3 +36,15 @@ firefox-esr
 file-roller
 mousepad
 ristretto
+
+# Fonts for Nanite Cyber theme
+fonts-ubuntu
+fonts-roboto-unhinted
+fonts-noto-mono
+
+# Icon themes
+papirus-icon-theme
+
+# Theme support packages
+gtk2-engines-murrine
+gtk2-engines-pixbuf
