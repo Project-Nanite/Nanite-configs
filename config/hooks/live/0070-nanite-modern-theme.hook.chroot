@@ -1,0 +1,147 @@
+#!/bin/bash
+
+# Nanite Modern Theme Installation Hook
+# Clean, professional theme with excellent contrast and readability
+
+set -e
+
+echo "🎨 Installing Nanite Modern Theme..."
+
+# Set theme permissions
+echo "📝 Setting theme permissions..."
+chmod -R 755 /usr/share/themes/nanite-modern
+chown -R root:root /usr/share/themes/nanite-modern
+
+# Create theme index files
+echo "📋 Creating theme index..."
+cat > /usr/share/themes/nanite-modern/index.theme << 'EOF'
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Nanite Modern
+Comment=Clean, modern theme with excellent contrast and readability
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=nanite-modern
+MetacityTheme=nanite-modern
+IconTheme=Papirus
+CursorTheme=default
+ButtonLayout=close,minimize,maximize:menu
+EOF
+
+# Install modern fonts
+echo "🔤 Installing modern fonts..."
+apt-get update
+
+# Install Inter font (modern, clean sans-serif)
+echo "Installing Inter font..."
+apt-get install -y --no-install-recommends fonts-inter || echo "fonts-inter not available, installing alternatives..."
+
+# Install backup fonts for reliability
+echo "Installing backup fonts..."
+apt-get install -y --no-install-recommends fonts-liberation fonts-dejavu-core fonts-ubuntu fonts-roboto || echo "Some fonts not available, continuing..."
+
+# Create beautiful wallpapers directory
+echo "🖼️ Creating wallpaper directory..."
+mkdir -p /usr/share/backgrounds
+
+# Create modern gradient wallpapers using imagemagick
+echo "🌅 Generating modern gradient wallpapers..."
+
+if command -v convert >/dev/null 2>&1; then
+    echo "Creating gradient wallpapers with ImageMagick..."
+    
+    # Main workspace - Clean white to light gray gradient
+    convert -size 1920x1080 gradient:#ffffff-#f8f9fa /usr/share/backgrounds/nanite-modern-gradient.jpg
+    
+    # Code workspace - Blue accent gradient
+    convert -size 1920x1080 gradient:#f8f9fa-#e3f2fd /usr/share/backgrounds/nanite-modern-code.jpg
+    
+    # Web workspace - Green accent gradient
+    convert -size 1920x1080 gradient:#f8f9fa-#e8f5e8 /usr/share/backgrounds/nanite-modern-web.jpg
+    
+    # Media workspace - Purple accent gradient
+    convert -size 1920x1080 gradient:#f8f9fa-#f3e5f5 /usr/share/backgrounds/nanite-modern-media.jpg
+    
+    # Create a subtle geometric pattern overlay
+    echo "Adding subtle geometric patterns..."
+    for bg in gradient code web media; do
+        # Add subtle geometric shapes
+        convert /usr/share/backgrounds/nanite-modern-${bg}.jpg \
+            -fill "rgba(52, 152, 219, 0.03)" \
+            -draw "polygon 1800,800 1900,800 1850,900" \
+            -fill "rgba(39, 174, 96, 0.02)" \
+            -draw "circle 200,200 150,150" \
+            -fill "rgba(155, 89, 182, 0.02)" \
+            -draw "rectangle 1600,400 1700,500" \
+            /usr/share/backgrounds/nanite-modern-${bg}.jpg
+    done
+else
+    echo "ImageMagick not available, creating solid color backgrounds..."
+    # Create solid color backgrounds as fallback
+    convert -size 1920x1080 "xc:#ffffff" "/usr/share/backgrounds/nanite-modern-gradient.jpg" 2>/dev/null || true
+    convert -size 1920x1080 "xc:#f8f9fa" "/usr/share/backgrounds/nanite-modern-code.jpg" 2>/dev/null || true
+    convert -size 1920x1080 "xc:#f8f9fa" "/usr/share/backgrounds/nanite-modern-web.jpg" 2>/dev/null || true
+    convert -size 1920x1080 "xc:#f8f9fa" "/usr/share/backgrounds/nanite-modern-media.jpg" 2>/dev/null || true
+fi
+
+# Set proper permissions for wallpapers
+chmod 644 /usr/share/backgrounds/nanite-modern-*.jpg 2>/dev/null || true
+
+# Update font cache
+echo "🔄 Updating font cache..."
+fc-cache -fv
+
+# Configure default applications
+echo "⚙️ Configuring default applications..."
+update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/xfce4-terminal 50
+update-alternatives --install /usr/bin/x-www-browser x-www-browser /usr/bin/firefox-esr 50
+
+# Create desktop entry for theme
+echo "🗂️ Creating theme desktop entry..."
+cat > /usr/share/applications/nanite-modern-theme.desktop << 'EOF'
+[Desktop Entry]
+Name=Nanite Modern Theme
+Comment=Switch to clean, modern theme
+Exec=xfce4-appearance-settings
+Icon=preferences-desktop-theme
+Terminal=false
+Type=Application
+Categories=Settings;DesktopSettings;
+Keywords=theme;appearance;modern;clean;nanite;
+EOF
+
+# Ensure proper directory permissions for skel
+echo "📁 Setting skel permissions..."
+chmod -R 755 /etc/skel/.config 2>/dev/null || true
+chown -R root:root /etc/skel/.config 2>/dev/null || true
+
+# Create autostart entry for theme application
+echo "🚀 Creating theme autostart..."
+mkdir -p /etc/skel/.config/autostart
+cat > /etc/skel/.config/autostart/nanite-modern-theme.desktop << 'EOF'
+[Desktop Entry]
+Type=Application
+Name=Nanite Modern Theme Initializer
+Comment=Initialize Nanite Modern theme on first boot
+Exec=sh -c 'sleep 3 && xfconf-query -c xsettings -p /Net/ThemeName -s "nanite-modern" && xfconf-query -c xfwm4 -p /general/theme -s "nanite-modern"'
+Hidden=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+EOF
+
+# Clean up package cache
+echo "🧹 Cleaning up..."
+apt-get clean
+rm -rf /var/lib/apt/lists/*
+
+# Final permissions check
+echo "🔒 Final permissions setup..."
+find /usr/share/themes/nanite-modern -type d -exec chmod 755 {} \;
+find /usr/share/themes/nanite-modern -type f -exec chmod 644 {} \;
+
+echo "✅ Nanite Modern Theme installed successfully!"
+echo "🎨 Clean, professional design with excellent contrast"
+echo "📱 Features: Modern panels, beautiful gradients, professional typography"
+echo "🔄 Theme will be auto-applied on first boot"
+echo "🌟 Much better than the old clay theme!"

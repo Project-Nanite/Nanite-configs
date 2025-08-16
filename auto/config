@@ -7,8 +7,7 @@ lb config noauto \
     --architecture amd64 \
     --debian-installer true \
     --debian-installer-gui false \
-    --bootloader grub-efi \
-    --bootloader grub-pc \
+    --bootloaders "grub-pc grub-efi" \
     --linux-flavours amd64 \
     --iso-publisher "Nanite Linux" \
     --iso-volume "Nanite Installer" \
