@@ -3,18 +3,17 @@
 <channel name="xfce4-panel" version="1.0">
   <property name="configver" type="int" value="2"/>
   
-  <!-- TOP PANEL - Main navigation and system controls -->
+  <!-- SINGLE TOP PANEL - All navigation and system controls -->
   <property name="panels" type="array">
     <value type="int" value="1"/>
-    <value type="int" value="2"/>
     
-    <!-- Panel 1: TOP PANEL -->
+    <!-- Panel 1: TOP PANEL - Consolidated -->
     <property name="panel-1" type="empty">
       <property name="position" type="string" value="p=6;x=0;y=0"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="icon-size" type="uint" value="20"/>
-      <property name="size" type="uint" value="48"/>
+      <property name="icon-size" type="uint" value="22"/>
+      <property name="size" type="uint" value="52"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
         <value type="int" value="2"/>
@@ -26,31 +25,6 @@
         <value type="int" value="8"/>
         <value type="int" value="9"/>
         <value type="int" value="10"/>
-      </property>
-      <!-- Beautiful clay panel styling -->
-      <property name="background-style" type="uint" value="1"/>
-      <property name="background-rgba" type="array">
-        <value type="double" value="0.968627"/>
-        <value type="double" value="0.964706"/>
-        <value type="double" value="0.952941"/>
-        <value type="double" value="0.95"/>
-      </property>
-      <property name="border-width" type="uint" value="0"/>
-      <property name="enter-opacity" type="uint" value="100"/>
-      <property name="leave-opacity" type="uint" value="95"/>
-      <property name="background-image" type="string" value=""/>
-      <property name="enable-struts" type="bool" value="true"/>
-      <property name="autohide-behavior" type="uint" value="0"/>
-    </property>
-    
-    <!-- Panel 2: BOTTOM PANEL -->
-    <property name="panel-2" type="empty">
-      <property name="position" type="string" value="p=10;x=0;y=0"/>
-      <property name="length" type="uint" value="100"/>
-      <property name="position-locked" type="bool" value="true"/>
-      <property name="icon-size" type="uint" value="24"/>
-      <property name="size" type="uint" value="56"/>
-      <property name="plugin-ids" type="array">
         <value type="int" value="11"/>
         <value type="int" value="12"/>
         <value type="int" value="13"/>
@@ -60,24 +34,24 @@
         <value type="int" value="17"/>
         <value type="int" value="18"/>
       </property>
-      <!-- Beautiful clay panel styling for bottom -->
+      <!-- Improved panel styling for better readability -->
       <property name="background-style" type="uint" value="1"/>
       <property name="background-rgba" type="array">
-        <value type="double" value="0.976471"/>
-        <value type="double" value="0.952941"/>
-        <value type="double" value="0.925490"/>
-        <value type="double" value="0.92"/>
+        <value type="double" value="0.945098"/>
+        <value type="double" value="0.937255"/>
+        <value type="double" value="0.921569"/>
+        <value type="double" value="0.98"/>
       </property>
-      <property name="border-width" type="uint" value="0"/>
+      <property name="border-width" type="uint" value="1"/>
       <property name="enter-opacity" type="uint" value="100"/>
-      <property name="leave-opacity" type="uint" value="92"/>
+      <property name="leave-opacity" type="uint" value="98"/>
       <property name="background-image" type="string" value=""/>
       <property name="enable-struts" type="bool" value="true"/>
       <property name="autohide-behavior" type="uint" value="0"/>
     </property>
   </property>
   
-  <!-- TOP PANEL PLUGINS -->
+  <!-- CONSOLIDATED TOP PANEL PLUGINS -->
   <property name="plugins" type="empty">
     <!-- 1. Whisker Menu (Modern application launcher) -->
     <property name="plugin-1" type="string" value="whiskermenu"/>
@@ -128,20 +102,12 @@
       <property name="time-format" type="uint" value="0"/>
     </property>
     
-    <!-- 10. Actions (Power menu) -->
-    <property name="plugin-10" type="string" value="actions">
-      <property name="appearance" type="uint" value="1"/>
-      <property name="items" type="array">
-        <value type="string" value="+logout-dialog"/>
-        <value type="string" value="+lock-screen"/>
-        <value type="string" value="+hibernate"/>
-        <value type="string" value="+suspend"/>
-        <value type="string" value="+restart"/>
-        <value type="string" value="+shutdown"/>
-      </property>
+    <!-- 10. Separator -->
+    <property name="plugin-10" type="string" value="separator">
+      <property name="expand" type="bool" value="false"/>
+      <property name="style" type="uint" value="0"/>
     </property>
     
-    <!-- BOTTOM PANEL PLUGINS -->
     <!-- 11. Show Desktop -->
     <property name="plugin-11" type="string" value="showdesktop"/>
     

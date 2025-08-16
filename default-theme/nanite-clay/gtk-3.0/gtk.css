@@ -106,13 +106,28 @@ entry:focus {
         0 4px 12px rgba(196, 151, 118, 0.1);
 }
 
-/* Smooth scrollbars */
+/* Smooth scrollbars - Improved sizing and configuration */
 scrollbar {
     background: rgba(196, 151, 118, 0.05);
-    border-radius: 8px;
-    margin: 4px;
+    border-radius: 6px;
+    margin: 2px;
+    min-width: 16px;
+    min-height: 16px;
 }
 
+/* Vertical scrollbars */
+scrollbar.vertical {
+    min-width: 16px;
+    max-width: 16px;
+}
+
+/* Horizontal scrollbars */
+scrollbar.horizontal {
+    min-height: 16px;
+    max-height: 16px;
+}
+
+/* Scrollbar slider - Better proportions */
 scrollbar slider {
     background: linear-gradient(135deg, @clay_primary 0%, @clay_secondary 100%);
     border-radius: 8px;
@@ -125,11 +140,66 @@ scrollbar slider {
     transition: all 0.3s ease;
 }
 
+/* Vertical slider specific */
+scrollbar.vertical slider {
+    min-width: 12px;
+    max-width: 12px;
+}
+
+/* Horizontal slider specific */
+scrollbar.horizontal slider {
+    min-height: 12px;
+    max-height: 12px;
+}
+
 scrollbar slider:hover {
     background: linear-gradient(135deg, #ebcaa9 0%, #e8a87c 100%);
     box-shadow: 
         0 3px 8px rgba(196, 151, 118, 0.25),
         inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+scrollbar slider:active {
+    background: linear-gradient(135deg, @clay_dark 0%, @clay_primary 100%);
+    box-shadow: 
+        0 1px 4px rgba(196, 151, 118, 0.3),
+        inset 0 2px 4px rgba(196, 151, 118, 0.2);
+}
+
+/* Scrollbar trough styling */
+scrollbar trough {
+    background: rgba(196, 151, 118, 0.08);
+    border-radius: 6px;
+    margin: 2px;
+}
+
+/* GTK4 scrollbar support */
+scrollbar {
+    background: rgba(196, 151, 118, 0.05);
+    border-radius: 6px;
+    margin: 2px;
+}
+
+scrollbar slider {
+    background: linear-gradient(135deg, @clay_primary 0%, @clay_secondary 100%);
+    border-radius: 8px;
+    min-width: 12px;
+    min-height: 12px;
+    margin: 2px;
+    transition: all 0.3s ease;
+}
+
+scrollbar slider:hover {
+    background: linear-gradient(135deg, #ebcaa9 0%, #e8a87c 100%);
+}
+
+/* Overlay scrollbars for modern apps */
+scrollbar.overlay-indicator {
+    background: rgba(196, 151, 118, 0.1);
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
+    background: transparent;
 }
 
 /* Beautiful menus with glass effect */

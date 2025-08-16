@@ -88,7 +88,7 @@
     </property>
     <property name="icon-size" type="uint" value="48"/>
     <property name="use-custom-font-size" type="bool" value="true"/>
-    <property name="font-size" type="double" value="10.000000"/>
+    <property name="font-size" type="double" value="11.000000"/>
     <property name="single-click" type="bool" value="false"/>
     <property name="show-tooltips" type="bool" value="true"/>
   </property>
