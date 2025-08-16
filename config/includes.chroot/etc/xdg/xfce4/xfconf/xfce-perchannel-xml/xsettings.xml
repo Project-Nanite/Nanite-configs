@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xsettings" version="1.0">
-  <!-- System-wide GTK Theme Settings for Nanite Clay -->
+  <!-- System-wide GTK Theme Settings for Nanite Dark Solid -->
   <property name="Net" type="empty">
-    <property name="ThemeName" type="string" value="nanite-clay"/>
+    <property name="ThemeName" type="string" value="Nanite-XFCE-Theme-Dark-solid"/>
     <property name="IconThemeName" type="string" value="Papirus"/>
     <property name="DoubleClickTime" type="uint" value="400"/>
     <property name="DoubleClickDistance" type="uint" value="5"/>

@@ -109,6 +109,10 @@ vim
 nano
 tree
 
+# Calamares Installer
+calamares
+calamares-settings-debian
+
 # Network Tools
 openssh-client
 rsync

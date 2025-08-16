@@ -34,17 +34,17 @@
         <value type="int" value="17"/>
         <value type="int" value="18"/>
       </property>
-      <!-- Improved panel styling for better readability -->
+      <!-- Dark theme panel styling for better contrast -->
       <property name="background-style" type="uint" value="1"/>
       <property name="background-rgba" type="array">
-        <value type="double" value="0.945098"/>
-        <value type="double" value="0.937255"/>
-        <value type="double" value="0.921569"/>
-        <value type="double" value="0.98"/>
+        <value type="double" value="0.200000"/>
+        <value type="double" value="0.200000"/>
+        <value type="double" value="0.200000"/>
+        <value type="double" value="0.95"/>
       </property>
       <property name="border-width" type="uint" value="1"/>
       <property name="enter-opacity" type="uint" value="100"/>
-      <property name="leave-opacity" type="uint" value="98"/>
+      <property name="leave-opacity" type="uint" value="95"/>
       <property name="background-image" type="string" value=""/>
       <property name="enable-struts" type="bool" value="true"/>
       <property name="autohide-behavior" type="uint" value="0"/>
