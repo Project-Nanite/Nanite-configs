@@ -5,80 +5,80 @@
     <property name="screen0" type="empty">
       <property name="monitor0" type="empty">
         <property name="workspace0" type="empty">
-          <!-- Main workspace - Clean gradient background -->
-          <property name="last-image" type="string" value="/usr/share/backgrounds/nanite-modern-gradient.jpg"/>
+          <!-- NEURAL workspace - AI dark background -->
+          <property name="last-image" type="string" value="/usr/share/backgrounds/nanite-ai-neural.jpg"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
           <property name="color-style" type="int" value="0"/>
-          <!-- Fallback colors if image fails -->
+          <!-- AI dark colors -->
           <property name="color1" type="array">
-            <value type="double" value="0.980392"/>
-            <value type="double" value="0.980392"/>
-            <value type="double" value="0.980392"/>
+            <value type="double" value="0.067"/>
+            <value type="double" value="0.078"/>
+            <value type="double" value="0.098"/>
             <value type="double" value="1.000000"/>
           </property>
           <property name="color2" type="array">
-            <value type="double" value="0.949020"/>
-            <value type="double" value="0.949020"/>
-            <value type="double" value="0.949020"/>
+            <value type="double" value="0.051"/>
+            <value type="double" value="0.067"/>
+            <value type="double" value="0.090"/>
             <value type="double" value="1.000000"/>
           </property>
         </property>
         <property name="workspace1" type="empty">
-          <!-- Code workspace - Blue accent -->
-          <property name="last-image" type="string" value="/usr/share/backgrounds/nanite-modern-code.jpg"/>
+          <!-- CODE workspace - Cyan accent -->
+          <property name="last-image" type="string" value="/usr/share/backgrounds/nanite-ai-code.jpg"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
           <property name="color-style" type="int" value="0"/>
           <property name="color1" type="array">
-            <value type="double" value="0.949020"/>
-            <value type="double" value="0.949020"/>
-            <value type="double" value="0.980392"/>
+            <value type="double" value="0.067"/>
+            <value type="double" value="0.078"/>
+            <value type="double" value="0.098"/>
             <value type="double" value="1.000000"/>
           </property>
           <property name="color2" type="array">
-            <value type="double" value="0.898039"/>
-            <value type="double" value="0.898039"/>
-            <value type="double" value="0.949020"/>
-            <value type="double" value="1.000000"/>
+            <value type="double" value="0.000"/>
+            <value type="double" value="0.800"/>
+            <value type="double" value="1.000"/>
+            <value type="double" value="0.200"/>
           </property>
         </property>
         <property name="workspace2" type="empty">
-          <!-- Web workspace - Green accent -->
-          <property name="last-image" type="string" value="/usr/share/backgrounds/nanite-modern-web.jpg"/>
+          <!-- DATA workspace - Green accent -->
+          <property name="last-image" type="string" value="/usr/share/backgrounds/nanite-ai-data.jpg"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
           <property name="color-style" type="int" value="0"/>
           <property name="color1" type="array">
-            <value type="double" value="0.949020"/>
-            <value type="double" value="0.980392"/>
-            <value type="double" value="0.949020"/>
+            <value type="double" value="0.067"/>
+            <value type="double" value="0.078"/>
+            <value type="double" value="0.098"/>
             <value type="double" value="1.000000"/>
           </property>
           <property name="color2" type="array">
-            <value type="double" value="0.898039"/>
-            <value type="double" value="0.949020"/>
-            <value type="double" value="0.898039"/>
-            <value type="double" value="1.000000"/>
+            <value type="double" value="0.000"/>
+            <value type="double" value="1.000"/>
+            <value type="double" value="0.500"/>
+            <value type="double" value="0.200"/>
           </property>
         </property>
         <property name="workspace3" type="empty">
-          <!-- Media workspace - Purple accent -->
-          <property name="last-image" type="string" value="/usr/share/backgrounds/nanite-modern-media.jpg"/>
+          <!-- MATRIX workspace - Green matrix style -->
+          <property name="last-image" type="string" value="/usr/share/backgrounds/nanite-ai-matrix.jpg"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
           <property name="color-style" type="int" value="0"/>
           <property name="color1" type="array">
-            <value type="double" value="0.980392"/>
-            <value type="double" value="0.949020"/>
-            <value type="double" value="0.980392"/>
+            <value type="double" value="0.067"/>
+            <value type="double" value="0.078"/>
+            <value type="double" value="0.098"/>
             <value type="double" value="1.000000"/>
           </property>
           <property name="color2" type="array">
-            <value type="double" value="0.949020"/>
-            <value type="double" value="0.898039"/>
-            <value type="double" value="0.949020"/>
-            <value type="double" value="1.000000"/>
+            <value type="double" value="0.000"/>
+            <value type="double" value="1.000"/>
+            <value type="double" value="0.000"/>
+            <value type="double" value="0.300"/>
           </property>
         </property>
       </property>
@@ -182,14 +182,14 @@
     <property name="desktop-rotate" type="bool" value="false"/>
   </property>
   
-  <!-- Workspace Configuration -->
+  <!-- Workspace Configuration - AI Workspaces -->
   <property name="workspaces" type="empty">
     <property name="count" type="uint" value="4"/>
     <property name="names" type="array">
-      <value type="string" value="Main"/>
-      <value type="string" value="Code"/>
-      <value type="string" value="Web"/>
-      <value type="string" value="Media"/>
+      <value type="string" value="NEURAL"/>
+      <value type="string" value="CODE"/>
+      <value type="string" value="DATA"/>
+      <value type="string" value="MATRIX"/>
     </property>
     
     <!-- Workspace behavior -->

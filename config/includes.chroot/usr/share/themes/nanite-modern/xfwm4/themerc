@@ -1,78 +1,78 @@
-# Nanite Modern XFWM4 Theme
-# Clean, professional window decorations
+# FUTURISTIC AI XFWM4 THEME
+# Sharp, high-tech window decorations with AI aesthetics
 
-# Window title styling
-title.font: Inter 10
-title.color: #2c3e50
-title.color.active: #ffffff
-title.color.inactive: #7f8c8d
+# Window title styling - AI terminal font
+title.font: JetBrains Mono Bold 9
+title.color: #4a9eff
+title.color.active: #4a9eff
+title.color.inactive: #3d7bff
 
-# Window borders
+# Window borders - Softer AI style
 border.width: 1
-border.color: #e1e8ed
-border.color.active: #3498db
-border.color.inactive: #bdc3c7
+border.color: #4a9eff
+border.color.active: #4a9eff
+border.color.inactive: #3d7bff
 
-# Window shadows
+# Window shadows - Softer AI glow effects
 shadow.enable: true
 shadow.offset.x: 0
-shadow.offset.y: 2
-shadow.color: rgba(52, 73, 94, 0.15)
+shadow.offset.y: 0
+shadow.color: rgba(74, 158, 255, 0.2)
 shadow.radius: 8
 
 # Button layout (O|HMC - close, minimize, maximize)
 button.layout: O|HMC
-button.offset: 4
-button.spacing: 2
+button.offset: 2
+button.spacing: 1
 
-# Button styling
-button.color: #f8f9fa
-button.color.active: #3498db
-button.color.prelight: #5dade2
-button.color.pressed: #2980b9
+# Button styling - Sharp AI design
+button.color: #111319
+button.color.active: #00ccff
+button.color.prelight: #0066ff
+button.color.pressed: #00ccff
 
-# Button icons
+# Button icons - Sharp placement
 button.icon.placement: N
 button.icon.offset.x: 0
 button.icon.offset.y: 0
 
-# Close button
+# Close button - Cyber red
 button.close.image: close
-button.close.color: #e74c3c
-button.close.color.active: #c0392b
-button.close.color.prelight: #e67e22
+button.close.color: #ff0040
+button.close.color.active: #ff0040
+button.close.color.prelight: #ff3366
 
-# Minimize button
+# Minimize button - AI orange
 button.minimize.image: minimize
-button.minimize.color: #f39c12
-button.minimize.color.active: #e67e22
-button.minimize.color.prelight: #f1c40f
+button.minimize.color: #ff9500
+button.minimize.color.active: #ff9500
+button.minimize.color.prelight: #ffb533
 
-# Maximize button
+# Maximize button - Electric green
 button.maximize.image: maximize
-button.maximize.color: #27ae60
-button.maximize.color.active: #2ecc71
-button.maximize.color.prelight: #16a085
+button.maximize.color: #00ff80
+button.maximize.color.active: #00ff80
+button.maximize.color.prelight: #33ff99
 
-# Hide button
+# Hide button - Tech purple
 button.hide.image: hide
-button.hide.color: #95a5a6
-button.hide.color.active: #7f8c8d
-button.hide.color.prelight: #bdc3c7
+button.hide.color: #8000ff
+button.hide.color.active: #8000ff
+button.hide.color.prelight: #9933ff
 
-# Menu button
+# Menu button - Matrix green
 button.menu.image: menu
-button.menu.color: #9b59b6
-button.menu.color.active: #8e44ad
-button.menu.color.prelight: #a569bd
+button.menu.color: #00ff00
+button.menu.color.active: #00ff00
+button.menu.color.prelight: #33ff33
 
-# Window focus
+# Window focus - AI behavior
 focus.mode: click
 focus.newWindows: true
 focus.autoRaise: false
-focus.autoRaiseDelay: 500
+focus.autoRaiseDelay: 100
 
-# Window placement
+# Window placement - AI positioning
 placement.mode: center
 placement.reserve: true
 placement.reserve.x: 0
@@ -80,54 +80,55 @@ placement.reserve.y: 0
 placement.reserve.width: 0
 placement.reserve.height: 0
 
-# Window snapping
+# Window snapping - Precise AI alignment
 snap.edge.enabled: true
-snap.edge.threshold: 10
-snap.edge.distance: 10
-snap.edge.resistance: 0.5
+snap.edge.threshold: 8
+snap.edge.distance: 8
+snap.edge.resistance: 0.2
 
-# Window cycling
+# Window cycling - Fast AI switching
 cycle.minimum: 1
 cycle.minimum.tab: 1
 cycle.minimum.tab.always: false
 
-# Compositing
+# Compositing - AI effects
 compositing: true
 compositing.manager: xfwm4
 compositing.unredirect.fullscreen: true
 compositing.vsync: true
 
-# Window animations
+# Window animations - Sharp AI transitions
 animation.enabled: true
-animation.duration: 200
-animation.easing: ease-out-cubic
+animation.duration: 100
+animation.easing: linear
 
-# Window opacity
+# Window opacity - AI transparency
 opacity.active: 100
-opacity.inactive: 95
+opacity.inactive: 90
 opacity.rule: 0:class_g=Gimp:100
 opacity.rule: 0:class_g=Firefox:100
 opacity.rule: 0:class_g=Thunderbird:100
+opacity.rule: 0:class_g=LibreOffice:100
 
-# Window decorations
+# Window decorations - AI style
 decoration.placement: top
 decoration.offset.x: 0
 decoration.offset.y: 0
 decoration.offset.width: 0
 decoration.offset.height: 0
 
-# Title bar height
-title.height: 28
-title.padding.x: 8
-title.padding.y: 4
+# Title bar height - Compact AI design
+title.height: 24
+title.padding.x: 6
+title.padding.y: 2
 
-# Button size
-button.width: 24
-button.height: 24
-button.padding.x: 2
-button.padding.y: 2
+# Button size - Sharp AI buttons
+button.width: 20
+button.height: 20
+button.padding.x: 1
+button.padding.y: 1
 
-# Window states
+# Window states - AI capabilities
 state.maximized: true
 state.fullscreen: true
 state.above: true
@@ -135,32 +136,32 @@ state.below: true
 state.sticky: true
 state.shaded: true
 
-# Workspace management
+# Workspace management - AI workspaces
 workspace.count: 4
-workspace.name.0: Main
-workspace.name.1: Code
-workspace.name.2: Web
-workspace.name.3: Media
+workspace.name.0: NEURAL
+workspace.name.1: CODE
+workspace.name.2: DATA
+workspace.name.3: MATRIX
 
-# Mouse bindings
+# Mouse bindings - AI control
 mouse.scroll.workspace: true
-mouse.scroll.workspace.threshold: 100
+mouse.scroll.workspace.threshold: 50
 mouse.scroll.workspace.direction: horizontal
 
-# Keyboard shortcuts
+# Keyboard shortcuts - AI hotkeys
 keybind.workspace.1: <Super>1
 keybind.workspace.2: <Super>2
 keybind.workspace.3: <Super>3
 keybind.workspace.4: <Super>4
 
-# Window rules
+# Window rules - AI application handling
 window.rules: class=Gimp:state=maximized
 window.rules: class=Firefox:state=maximized
 window.rules: class=Thunderbird:state=maximized
 window.rules: class=LibreOffice:state=maximized
 
-# Theme metadata
-theme.name: Nanite Modern
-theme.author: Nanite Linux Team
-theme.version: 1.0
-theme.description: Clean, modern window decorations for Nanite Linux
+# Theme metadata - AI theme
+theme.name: Nanite AI
+theme.author: Nanite AI Systems
+theme.version: 2.0
+theme.description: Futuristic AI window decorations for next-generation computing

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Nanite Modern
-Comment=Clean, modern theme with excellent contrast and readability
+Name=Nanite AI
+Comment=Futuristic AI theme with sharp design and high-tech aesthetics
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
@@ -12,7 +12,7 @@ CursorTheme=default
 ButtonLayout=close,minimize,maximize:menu
 
 [Desktop Entry]
-Name=Nanite Modern
-Comment=Clean, modern theme with excellent contrast and readability
+Name=Nanite AI
+Comment=Futuristic AI theme with sharp design and high-tech aesthetics  
 Type=X-GNOME-Metatheme
-Version=1.0
+Version=2.0
