@@ -14,11 +14,14 @@ strings:
     releaseNotesUrl: "https://nanite-linux.org/releases"
 
 images:
-    # productLogo: "nanite-logo.png"
-    # productIcon: "nanite-icon.png"
-    # productWelcome: "nanite-welcome.png"
+    productLogo: "/usr/share/icons/Nanite-Icons/apps/128/distributor-logo.png"
+    productIcon: "/usr/share/icons/Nanite-Icons/apps/48/distributor-logo.png"
+    productWelcome: "/usr/share/backgrounds/wallpaper.png"
 
 style:
     sidebarBackground: "#2c3e50"
     sidebarText: "#ffffff"
     sidebarTextSelect: "#4d7cf4"
+
+slideshow: "qml"
+slideshowAPI: "1.0"

@@ -13,7 +13,7 @@
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="icon-size" type="uint" value="22"/>
-      <property name="size" type="uint" value="52"/>
+      <property name="size" type="uint" value="32"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
         <value type="int" value="2"/>
@@ -33,6 +33,8 @@
         <value type="int" value="16"/>
         <value type="int" value="17"/>
         <value type="int" value="18"/>
+        <value type="int" value="19"/>
+        <value type="int" value="20"/>
       </property>
       <!-- Dark theme panel styling for better contrast -->
       <property name="background-style" type="uint" value="1"/>
@@ -51,8 +53,9 @@
     </property>
   </property>
   
-  <!-- CONSOLIDATED TOP PANEL PLUGINS -->
+  <!-- PROPERLY ORGANIZED TOP PANEL PLUGINS -->
   <property name="plugins" type="empty">
+    <!-- LEFT SIDE: Application Menu and Quick Launchers -->
     <!-- 1. Whisker Menu (Modern application launcher) -->
     <property name="plugin-1" type="string" value="whiskermenu"/>
     
@@ -83,42 +86,15 @@
       </property>
     </property>
     
-    <!-- 6. Flexible spacer -->
+    <!-- 6. Separator -->
     <property name="plugin-6" type="string" value="separator">
-      <property name="expand" type="bool" value="true"/>
-      <property name="style" type="uint" value="0"/>
-    </property>
-    
-    <!-- 7. System Load Monitor -->
-    <property name="plugin-7" type="string" value="systemload"/>
-    
-    <!-- 8. Network Monitor -->
-    <property name="plugin-8" type="string" value="netload"/>
-    
-    <!-- 9. DateTime -->
-    <property name="plugin-9" type="string" value="datetime">
-      <property name="layout" type="uint" value="3"/>
-      <property name="date-format" type="uint" value="0"/>
-      <property name="time-format" type="uint" value="0"/>
-    </property>
-    
-    <!-- 10. Separator -->
-    <property name="plugin-10" type="string" value="separator">
       <property name="expand" type="bool" value="false"/>
       <property name="style" type="uint" value="0"/>
     </property>
     
-    <!-- 11. Show Desktop -->
-    <property name="plugin-11" type="string" value="showdesktop"/>
-    
-    <!-- 12. Separator -->
-    <property name="plugin-12" type="string" value="separator">
-      <property name="expand" type="bool" value="false"/>
-      <property name="style" type="uint" value="0"/>
-    </property>
-    
-    <!-- 13. Task List (Window buttons) -->
-    <property name="plugin-13" type="string" value="tasklist">
+    <!-- CENTER: Task List (Window buttons) - Takes up most space -->
+    <!-- 7. Task List (Window buttons) -->
+    <property name="plugin-7" type="string" value="tasklist">
       <property name="grouping" type="bool" value="true"/>
       <property name="include-all-workspaces" type="bool" value="true"/>
       <property name="flat-buttons" type="bool" value="false"/>
@@ -130,18 +106,47 @@
       <property name="grouping-min" type="uint" value="2"/>
     </property>
     
+    <!-- RIGHT SIDE: System indicators and controls -->
+    <!-- 8. Separator -->
+    <property name="plugin-8" type="string" value="separator">
+      <property name="expand" type="bool" value="false"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    
+    <!-- 9. System Load Monitor -->
+    <property name="plugin-9" type="string" value="systemload"/>
+    
+    <!-- 10. Network Monitor -->
+    <property name="plugin-10" type="string" value="netload"/>
+    
+    <!-- 11. DateTime -->
+    <property name="plugin-11" type="string" value="datetime">
+      <property name="layout" type="uint" value="3"/>
+      <property name="date-format" type="uint" value="0"/>
+      <property name="time-format" type="uint" value="0"/>
+    </property>
+    
+    <!-- 12. Separator -->
+    <property name="plugin-12" type="string" value="separator">
+      <property name="expand" type="bool" value="false"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    
+    <!-- 13. Workspace Switcher -->
+    <property name="plugin-13" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="miniature-view" type="bool" value="true"/>
+      <property name="workspace-scrolling" type="bool" value="true"/>
+    </property>
+    
     <!-- 14. Separator -->
     <property name="plugin-14" type="string" value="separator">
       <property name="expand" type="bool" value="false"/>
       <property name="style" type="uint" value="0"/>
     </property>
     
-    <!-- 15. Workspace Switcher -->
-    <property name="plugin-15" type="string" value="pager">
-      <property name="rows" type="uint" value="1"/>
-      <property name="miniature-view" type="bool" value="true"/>
-      <property name="workspace-scrolling" type="bool" value="true"/>
-    </property>
+    <!-- 15. Show Desktop -->
+    <property name="plugin-15" type="string" value="showdesktop"/>
     
     <!-- 16. Separator -->
     <property name="plugin-16" type="string" value="separator">
@@ -160,15 +165,33 @@
     <property name="plugin-18" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="firefox.instance*;vlc;*"/>
+      <property name="mpris-players" type="string" value="firefox-esr.instance*;vlc;*"/>
+    </property>
+    
+    <!-- 19. Separator -->
+    <property name="plugin-19" type="string" value="separator">
+      <property name="expand" type="bool" value="false"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    
+    <!-- 20. Session Management (Shutdown, Reboot, Logout, Suspend) -->
+    <property name="plugin-20" type="string" value="actions">
+      <property name="items" type="array">
+        <value type="string" value="suspend"/>
+        <value type="string" value="hibernate"/>
+        <value type="string" value="logout"/>
+        <value type="string" value="restart"/>
+        <value type="string" value="shutdown"/>
+        <value type="string" value="lockscreen"/>
+      </property>
     </property>
   </property>
   
   <!-- Whisker Menu Configuration -->
   <property name="plugin-1" type="empty">
     <property name="button-title" type="string" value="Nanite"/>
-    <property name="button-icon" type="string" value="distributor-logo"/>
-    <property name="show-button-title" type="bool" value="true"/>
+    <property name="button-icon" type="string" value="/usr/share/icons/Nanite-Icons/apps/48/distributor-logo.png"
+    <property name="show-button-title" type="bool" value="false"/>
     <property name="show-button-icon" type="bool" value="true"/>
     <property name="launcher-show-name" type="bool" value="true"/>
     <property name="launcher-show-description" type="bool" value="true"/>

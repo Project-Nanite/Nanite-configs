@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=About Nanite
+Name[en_US]=About Nanite
+Comment=Learn more about Nanite Linux
+Comment[en_US]=Learn more about Nanite Linux
+Exec=nanite-info
+Icon=/usr/share/icons/Nanite-Icons/apps/48/distributor-logo.png
+Terminal=false
+StartupNotify=true
+Categories=System;Settings;
+Keywords=nanite;linux;about;info;
+GenericName=About Nanite
+GenericName[en_US]=About Nanite
