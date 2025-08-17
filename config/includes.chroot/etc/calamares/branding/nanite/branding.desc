@@ -23,5 +23,5 @@ style:
     sidebarText: "#ffffff"
     sidebarTextSelect: "#4d7cf4"
 
-slideshow: "qml"
+slideshow: "show.qml"
 slideshowAPI: "1.0"
