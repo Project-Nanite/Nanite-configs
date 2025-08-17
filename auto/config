@@ -1,4 +1,5 @@
 #!/bin/sh
+
 set -e
 
 lb config noauto \
@@ -13,9 +14,4 @@ lb config noauto \
     --firmware-binary true \
     --firmware-chroot true \
     --archive-areas "main contrib non-free non-free-firmware" \
-    --bootappend-live "boot=live components quiet splash noprompt" \
-    --grub-timeout 0 \
-    --syslinux-timeout 0 \
-    --grub-splash "" \
-    --syslinux-splash "" \
     "${@}"
