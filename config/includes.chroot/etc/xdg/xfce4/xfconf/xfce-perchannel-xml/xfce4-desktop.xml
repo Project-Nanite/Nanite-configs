@@ -39,30 +39,4 @@
       </property>
     </property>
   </property>
-  
-  <!-- Desktop icons and behavior -->
-  <property name="desktop-icons" type="empty">
-    <property name="file-icons" type="empty">
-      <property name="show-home" type="bool" value="false"/>
-      <property name="show-filesystem" type="bool" value="false"/>
-      <property name="show-trash" type="bool" value="true"/>
-      <property name="show-removable" type="bool" value="true"/>
-      <property name="show-desktop" type="bool" value="true"/>
-    </property>
-    <property name="icon-size" type="uint" value="48"/>
-    <property name="use-custom-font-size" type="bool" value="true"/>
-    <property name="font-size" type="double" value="11.000000"/>
-    <property name="single-click" type="bool" value="false"/>
-    <property name="show-tooltips" type="bool" value="true"/>
-  </property>
-  
-  <!-- Window list menu -->
-  <property name="windowlist-menu" type="empty">
-    <property name="show" type="bool" value="true"/>
-    <property name="show-app-icons" type="bool" value="true"/>
-    <property name="show-workspace-names" type="bool" value="true"/>
-    <property name="show-workspace-submenus" type="bool" value="false"/>
-    <property name="show-sticky-once" type="bool" value="true"/>
-    <property name="show-icons" type="bool" value="true"/>
-  </property>
-</channel> 
+</channel>

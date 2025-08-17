@@ -5,8 +5,6 @@ set -e
 lb config noauto \
     --distribution bookworm \
     --architecture amd64 \
-    --debian-installer true \
-    --debian-installer-gui false \
     --bootloaders "grub-pc grub-efi" \
     --linux-flavours amd64 \
     --iso-publisher "Nanite Linux" \

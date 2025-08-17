@@ -1,6 +1,6 @@
 # Nanite Linux - Essential Packages for Beautiful XFCE Desktop
 # Claymorphism-themed custom Linux distribution
-
+grub
 # Base System
 live-boot
 live-config
