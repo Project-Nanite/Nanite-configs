@@ -20,29 +20,29 @@ cat > /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml << 'E
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
-          <property name="image-path" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
+          <property name="image-path" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
-          <property name="image-path" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
+          <property name="image-path" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
-          <property name="image-path" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
+          <property name="image-path" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
-          <property name="image-path" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
+          <property name="image-path" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
         </property>
       </property>
     </property>
@@ -61,29 +61,29 @@ cat > /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml << 'EOF'
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
-          <property name="image-path" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
+          <property name="image-path" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
-          <property name="image-path" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
+          <property name="image-path" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
-          <property name="image-path" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
+          <property name="image-path" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
           <property name="image-show" type="bool" value="true"/>
-          <property name="image-path" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/wallpaper.png"/>
+          <property name="image-path" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/Nanite/wallpaper.png"/>
         </property>
       </property>
     </property>
@@ -92,4 +92,4 @@ cat > /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml << 'EOF'
 EOF
 
 echo "Wallpaper configuration completed successfully!"
-echo "All workspaces will now use /usr/share/backgrounds/wallpaper.png"
+echo "All workspaces will now use /usr/share/backgrounds/Nanite/wallpaper.png"
