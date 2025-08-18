@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+# Install feh (in case it isn’t already pulled in)
+apt-get update
+apt-get install -y feh
+
+# Create autostart dir for default live user (via /etc/skel)
+mkdir -p /etc/skel/.config/autostart
+
+# Create autostart entry to set wallpaper using feh
+cat > /etc/skel/.config/autostart/set-wallpaper.desktop <<EOF
+[Desktop Entry]
+Type=Application
+Exec=feh --bg-scale /usr/share/backgrounds/wallpaper.png
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Set Wallpaper
+Comment=Set XFCE wallpaper using feh
+EOF

@@ -1,0 +1,24 @@
+# Calamares branding for Nanite
+componentName: "nanite"
+
+strings:
+  productName: "Nanite Linux"
+  shortVersion: "1.0"
+  version: "1.0 (Stable)"
+  versionedName: "Nanite Linux 1.0"
+  shortDescription: "Fast, modern XFCE experience"
+  bootloaderEntryName: "Nanite"
+  windowTitle: "Nanite Installer"
+
+images:
+  productLogo: "/usr/share/pixmaps/debian-logo.png"
+  productIcon: "/usr/share/pixmaps/debian-logo.png"
+  productWallpaper: "/usr/share/backgrounds/Nanite/wallpaper.png"
+
+style:
+  sidebarLogo: "/usr/share/pixmaps/debian-logo.png"
+
+slideshow:
+  slideshow: "/usr/share/calamares/branding/default/slideshow/"
+
+

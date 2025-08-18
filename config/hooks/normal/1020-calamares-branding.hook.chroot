@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+# Ensure Calamares branding is set to Nanite if Calamares is installed
+if [ -f /etc/calamares/settings.conf ]; then
+    sed -i 's/^\s*branding:.*/branding: nanite/' /etc/calamares/settings.conf || true
+fi
+
+exit 0
+
+
