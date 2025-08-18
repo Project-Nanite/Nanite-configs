@@ -1,11 +1,11 @@
 # Nanite Linux - Essential Packages for Beautiful XFCE Desktop
-# Claymorphism-themed custom Linux distribution
-grub
+
 # Base System
 live-boot
 live-config
 live-config-systemd
-
+grub
+grub-pc
 # Essential System Tools
 systemd
 systemd-sysv
@@ -108,9 +108,11 @@ git
 vim
 nano
 tree
+zenity
 
 # Calamares Installer
 calamares
+calamares-settings-debian
 
 # Network Tools
 openssh-client
@@ -122,3 +124,6 @@ xfce4-power-manager
 # Appearance Manager
 gtk2-engines-murrine
 gtk2-engines-pixbuf
+
+
+
