@@ -4,7 +4,6 @@
 live-boot
 live-config
 live-config-systemd
-grub
 grub-pc
 # Essential System Tools
 systemd
