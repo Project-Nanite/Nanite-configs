@@ -3,22 +3,26 @@
 # Configure Plymouth for Nanite Live Boot
 # This hook sets up the ceratopsian theme and ensures Plymouth is properly configured
 
-set -e
+# set -e removed to prevent failure on missing Plymouth components
 
 echo "I: Configuring Plymouth with ceratopsian theme..."
 
-# Enable Plymouth in systemd
-systemctl enable plymouth-start.service
-systemctl enable plymouth-read-write.service
-systemctl enable plymouth-quit.service
-systemctl enable plymouth-quit-wait.service
+# Enable Plymouth in systemd (only if services exist)
+systemctl enable plymouth-start.service 2>/dev/null || echo "W: plymouth-start.service not found"
+systemctl enable plymouth-read-write.service 2>/dev/null || echo "W: plymouth-read-write.service not found"
+systemctl enable plymouth-quit.service 2>/dev/null || echo "W: plymouth-quit.service not found"
+systemctl enable plymouth-quit-wait.service 2>/dev/null || echo "W: plymouth-quit-wait.service not found"
 
 # Create plymouth directories if they don't exist
 mkdir -p /etc/plymouth
 mkdir -p /usr/share/plymouth/themes
 
 # Set the default Plymouth theme to ceratopsian
-plymouth-set-default-theme ceratopsian
+if command -v plymouth-set-default-theme >/dev/null 2>&1; then
+    plymouth-set-default-theme ceratopsian || echo "W: Could not set Plymouth theme"
+else
+    echo "W: plymouth-set-default-theme command not found"
+fi
 
 # Update initramfs to include Plymouth
 if command -v update-initramfs >/dev/null 2>&1; then

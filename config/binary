@@ -10,7 +10,7 @@ LB_BINARY_FILESYSTEM="fat32"
 LB_APT_INDICES="false"
 
 # Set boot parameters
-LB_BOOTAPPEND_LIVE="boot=live components persistence quiet splash plymouth.ignore-serial-consoles"
+LB_BOOTAPPEND_LIVE="boot=live components persistence quiet splash plymouth.ignore-serial-consoles username=nanite autologin"
 
 # Set boot parameters
 LB_BOOTAPPEND_INSTALL=""

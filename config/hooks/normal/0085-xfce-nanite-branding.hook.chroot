@@ -197,4 +197,3 @@ XFCE_DISTRIBUTOR_LOGO=/usr/share/pixmaps/nanite-logo.png
 EOF
 
 echo "I: XFCE Nanite branding configuration completed!"
-EOF
