@@ -181,7 +181,7 @@ fun calcfmt(frill,logo_base) {
 
 
 # Load the main wallpaper as background
-wallpaper = Image("/usr/share/backgrounds/Nanite/wallpaper.png");
+wallpaper = Image("/usr/share/backgrounds/wallpaper.png");
 
 # Scale wallpaper to fit screen
 wallpaper = wallpaper.Scale(Window.GetWidth(), Window.GetHeight());

@@ -46,7 +46,7 @@ fun calcfmt(logo_base) {
 }
 
 #---------------------------- Load & Show Logo --------------------------------
-logo = Image("logo.png");
+logo = Image("nanite-logo.png");
 logodim = calcfmt(logo);
 logo = logo.Scale(logodim.logo.xsize, logodim.logo.ysize);
 logo_sprite = Sprite(logo);

@@ -1,10 +1,22 @@
 # Nanite Linux - Essential Packages for Beautiful XFCE Desktop
 
+
+firmware-linux
+firmware-linux-nonfree
+firmware-realtek
+firmware-amd-graphics
+
+
+
 # Base System
 live-boot
 live-config
 live-config-systemd
 grub-pc
+
+# Plymouth Boot Splash
+plymouth
+plymouth-themes
 # Essential System Tools
 systemd
 systemd-sysv

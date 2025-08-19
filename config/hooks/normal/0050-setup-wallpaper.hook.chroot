@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Simple wallpaper setup for XFCE
+echo "Setting up default wallpaper for XFCE..."
+
+# Ensure the wallpaper exists and has proper permissions
+if [ -f "/usr/share/backgrounds/wallpaper.png" ]; then
+    chmod 644 /usr/share/backgrounds/wallpaper.png
+    echo "Wallpaper found and permissions set: /usr/share/backgrounds/wallpaper.png"
+else
+    echo "Warning: Wallpaper not found at /usr/share/backgrounds/wallpaper.png"
+fi
+
+# Create user config directory structure
+mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml
+
+# Copy the system-wide XFCE desktop configuration to user skeleton
+# This ensures new users get the wallpaper configuration
+if [ -f "/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml" ]; then
+    cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml \
+       /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+    chmod 644 /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+    echo "XFCE desktop configuration copied to user skeleton"
+fi
+
+# Apply to live user if it exists
+if [ -d "/home/user" ]; then
+    mkdir -p /home/user/.config/xfce4/xfconf/xfce-perchannel-xml
+    cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml \
+       /home/user/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+    chown -R user:user /home/user/.config
+    echo "XFCE desktop configuration applied to live user"
+fi
+
+echo "Wallpaper setup completed successfully!"
+echo "Default wallpaper: /usr/share/backgrounds/wallpaper.png"

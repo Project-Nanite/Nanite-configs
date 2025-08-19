@@ -1,8 +1,8 @@
 [Plymouth Theme]
-Name=Nanite theme
-Description=Nanite theme by Nanite Team
+Name=Ceratopsian theme for Nanite
+Description=Ceratopsian theme by Elise Couper for Nanite Distribution
 ModuleName=script
 
 [script]
-ImageDir=/usr/share/plymouth/themes/nanite
-ScriptFile=/usr/share/plymouth/themes/nanite/nanite.script
+ImageDir=/usr/share/plymouth/themes/ceratopsian
+ScriptFile=/usr/share/plymouth/themes/ceratopsian/ceratopsian.script

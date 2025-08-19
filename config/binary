@@ -10,22 +10,22 @@ LB_BINARY_FILESYSTEM="fat32"
 LB_APT_INDICES="false"
 
 # Set boot parameters
-LB_BOOTAPPEND_LIVE="boot=live components persistence"
+LB_BOOTAPPEND_LIVE="boot=live components persistence quiet splash plymouth.ignore-serial-consoles"
 
 # Set boot parameters
 LB_BOOTAPPEND_INSTALL=""
 
 # Set boot parameters
-LB_BOOTAPPEND_LIVE_FAILSAFE="boot=live components memtest noapic noapm nodma nomce nolapic nosmp nosplash vga=788"
+LB_BOOTAPPEND_LIVE_FAILSAFE="boot=live components memtest noapic noapm nodma nomce nolapic nosmp plymouth.ignore-serial-consoles vga=788"
 
 # Set BIOS bootloader
 LB_BOOTLOADER_BIOS="grub-pc"
 
 # Set EFI bootloader
-LB_BOOTLOADER_EFI=""
+LB_BOOTLOADER_EFI="grub-efi"
 
 # Set bootloaders
-LB_BOOTLOADERS="grub-pc"
+LB_BOOTLOADERS="grub-pc grub-efi"
 
 # Set checksums
 LB_CHECKSUMS="sha256 md5"

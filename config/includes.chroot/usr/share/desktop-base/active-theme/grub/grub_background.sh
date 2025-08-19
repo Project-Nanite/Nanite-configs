@@ -1,3 +1,3 @@
-WALLPAPER=/usr/share/backgrounds/Nanite/wallpaper.png
+WALLPAPER=/usr/share/backgrounds/wallpaper.png
 COLOR_NORMAL=white/black
 COLOR_HIGHLIGHT=black/white

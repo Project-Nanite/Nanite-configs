@@ -6,19 +6,29 @@ strings:
   shortVersion: "1.0"
   version: "1.0 (Stable)"
   versionedName: "Nanite Linux 1.0"
-  shortDescription: "Fast, modern XFCE experience"
+  shortDescription: "A Beautiful AI/ML Distribution"
+  website: "https://nanite.software"
+  support: "https://nanite.software/support"
   bootloaderEntryName: "Nanite"
   windowTitle: "Nanite Installer"
 
 images:
-  productLogo: "/usr/share/pixmaps/debian-logo.png"
-  productIcon: "/usr/share/pixmaps/debian-logo.png"
-  productWallpaper: "/usr/share/backgrounds/Nanite/wallpaper.png"
+  productLogo: "/usr/share/pixmaps/nanite-logo.png"
+  productIcon: "/usr/share/pixmaps/nanite-logo.png"
+  productWallpaper: "/usr/share/backgrounds/wallpaper.png"
 
 style:
-  sidebarLogo: "/usr/share/pixmaps/debian-logo.png"
+  sidebarLogo: "/usr/share/pixmaps/nanite-logo.png"
+  SidebarBackground: "#2d2d30"
+  SidebarText: "#ffffff"
+  SidebarTextSelect: "#4a90e2"
+  FrameworkColor: "#1a1a1a"
+  BackgroundColor: "#1a1a1a"
+  AccentColor: "#4a90e2"
+  TextColor: "#ffffff"
+  BackgroundImage: "/usr/share/backgrounds/wallpaper.png"
 
 slideshow:
-  slideshow: "/usr/share/calamares/branding/default/slideshow/"
+  slideshow: "/usr/share/calamares/branding/nanite/slideshow/slideshow.qml"
 
 
