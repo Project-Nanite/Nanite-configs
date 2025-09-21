@@ -6,7 +6,7 @@ strings:
   shortVersion: "1.0"
   version: "1.0 (Stable)"
   versionedName: "Nanite Linux 1.0"
-  shortDescription: "A Beautiful AI/ML Distribution"
+  shortDescription: "AI/ML Powered Distribution for Developers"
   website: "https://nanite.software"
   support: "https://nanite.software/support"
   bootloaderEntryName: "Nanite"
@@ -15,18 +15,27 @@ strings:
 images:
   productLogo: "/usr/share/pixmaps/nanite-logo.png"
   productIcon: "/usr/share/pixmaps/nanite-logo.png"
-  productWallpaper: "/usr/share/backgrounds/wallpaper.png"
+  productWallpaper: "/usr/share/backgrounds/calamaresbackground.png"
 
 style:
+  # Sidebar
   sidebarLogo: "/usr/share/pixmaps/nanite-logo.png"
-  SidebarBackground: "#2d2d30"
-  SidebarText: "#ffffff"
-  SidebarTextSelect: "#4a90e2"
-  FrameworkColor: "#1a1a1a"
-  BackgroundColor: "#1a1a1a"
-  AccentColor: "#4a90e2"
-  TextColor: "#ffffff"
-  BackgroundImage: "/usr/share/backgrounds/wallpaper.png"
+  sidebarBackground: "#1f1f23"       # slightly lighter dark for contrast
+  sidebarText: "#e0e0e0"             # softer white text
+  sidebarTextSelect: "#4a90e2"       # bright blue accent for selected items
+
+  # Main framework
+  frameworkColor: "#121212"          # deep dark for panels
+  background: "rgba(18,18,18,0.9)"   # semi-transparent dark overlay
+  backgroundImage: "/usr/share/backgrounds/calamaresbackground.png"
+  text: "#f5f5f5"                    # softer white for readability
+  accent: "#4a90e2"                  # Nanite brand blue
+
+  # Optional extra accents
+  buttonBackground: "#2d2d30"
+  buttonHover: "#4a90e2"
+  buttonText: "#ffffff"
+  progressBarBackground: "#2a2a2d"
+  progressBarFill: "#4a90e2"
 
 slideshow: "/usr/share/calamares/branding/nanite/slideshow/slideshow.qml"
-
