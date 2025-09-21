@@ -43,7 +43,7 @@ chmod +x "$AUTOSTART_DIR/calamares-installer.desktop"
 chown -R $LIVE_USER:$LIVE_USER "$AUTOSTART_DIR"
 chown -R $LIVE_USER:$LIVE_USER "$LIVE_HOME/.config"
 
-# Also create a system-wide autostart entry as backup
+# Create a live-environment-only autostart entry
 mkdir -p /etc/xdg/autostart
 cat > /etc/xdg/autostart/calamares-installer.desktop << 'EOF'
 [Desktop Entry]
@@ -53,7 +53,7 @@ Name=Nanite Installer
 Name[en_US]=Nanite Linux Installer
 Comment=Install Nanite Linux to your computer
 Comment[en_US]=Install the beautiful Nanite Linux distribution to your hard drive
-Exec=sudo calamares
+Exec=/usr/local/bin/check-live-and-launch
 Icon=calamares
 Terminal=false
 StartupNotify=true
@@ -97,10 +97,10 @@ chmod +x /usr/local/bin/nanite-calamares-launcher
 sed -i 's|Exec=sudo calamares|Exec=/usr/local/bin/nanite-calamares-launcher|g' "$AUTOSTART_DIR/calamares-installer.desktop"
 sed -i 's|Exec=sudo calamares|Exec=/usr/local/bin/nanite-calamares-launcher|g' /etc/xdg/autostart/calamares-installer.desktop
 
-# Create a systemd service as an additional fallback
+# Create a systemd service that only runs in live environment
 cat > /etc/systemd/system/nanite-calamares-autostart.service << 'EOF'
 [Unit]
-Description=Nanite Calamares Auto-start
+Description=Nanite Calamares Auto-start (Live Environment Only)
 After=graphical.target
 Wants=graphical.target
 
@@ -111,7 +111,7 @@ Group=nanite
 Environment=DISPLAY=:0
 WorkingDirectory=/home/nanite
 ExecStartPre=/bin/sleep 10
-ExecStart=/usr/local/bin/nanite-calamares-launcher
+ExecStart=/usr/local/bin/check-live-and-launch
 Restart=no
 StandardOutput=journal
 StandardError=journal
@@ -128,11 +128,19 @@ cat > /usr/local/bin/check-live-and-launch << 'EOF'
 #!/bin/bash
 
 # Check if we're in live environment and launch Calamares
-if [ -f /etc/live-build/live-build.conf ] || [ -d /lib/live ] || [ -f /etc/live-build ]; then
+# Multiple detection methods for reliability
+if [ -f /etc/live-build/live-build.conf ] || \
+   [ -d /lib/live ] || \
+   [ -f /etc/live-build ] || \
+   [ -f /etc/casper.conf ] || \
+   [ -d /cdrom ] || \
+   [ -f /proc/cmdline ] && grep -q "boot=live" /proc/cmdline; then
     echo "Live environment detected, launching Calamares..."
     /usr/local/bin/nanite-calamares-launcher &
 else
     echo "Not in live environment, skipping Calamares auto-launch"
+    # Disable the service in installed system
+    systemctl disable nanite-calamares-autostart.service 2>/dev/null || true
 fi
 EOF
 

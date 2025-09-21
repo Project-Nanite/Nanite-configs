@@ -1,0 +1,94 @@
+# Nanite Linux GRUB Theme
+# Custom theme for live environment
+
+# Set theme properties
+desktop-image: "/usr/share/backgrounds/nanite-grub.png"
+desktop-color: "#000000"
+title-text: "Nanite Linux"
+title-font: "DejaVu Sans Bold 16"
+title-color: "#ffffff"
+message-font: "DejaVu Sans 12"
+message-color: "#ffffff"
+message-bg-color: "#000000"
+
+# Menu properties
+item-color: "#ffffff"
+item-color-selected: "#ffffff"
+item-bg-color: "#000000"
+item-bg-color-selected: "#4d7cf4"
+item-spacing: 8
+item-height: 32
+item-padding: 8
+item-icon-width: 32
+item-icon-height: 32
+
+# Progress bar
+progress-bar-border-color: "#ffffff"
+progress-bar-border-width: 1
+progress-bar-color: "#4d7cf4"
+progress-bar-background-color: "#000000"
+
+# Boot menu
+boot-menu-border-color: "#ffffff"
+boot-menu-border-width: 1
+boot-menu-color: "#ffffff"
+boot-menu-background-color: "#000000"
+
+# Terminal box
+terminal-box: "terminal_box_*.png"
+terminal-font: "DejaVu Sans Mono 12"
+terminal-border-color: "#ffffff"
+terminal-border-width: 1
+terminal-color: "#ffffff"
+terminal-background-color: "#000000"
+
+# Scrollbar
+scrollbar-thumb-color: "#4d7cf4"
+scrollbar-background-color: "#000000"
+scrollbar-width: 16
+
+# Menu frame
+menu-frame-color: "#ffffff"
+menu-frame-width: 1
+menu-frame-background-color: "#000000"
+
+# Menu title
+menu-title-color: "#ffffff"
+menu-title-font: "DejaVu Sans Bold 14"
+menu-title-background-color: "#000000"
+
+# Menu items
+menu-item-color: "#ffffff"
+menu-item-color-selected: "#ffffff"
+menu-item-background-color: "#000000"
+menu-item-background-color-selected: "#4d7cf4"
+menu-item-spacing: 4
+menu-item-height: 28
+menu-item-padding: 6
+menu-item-icon-width: 24
+menu-item-icon-height: 24
+
+# Menu separator
+menu-separator-color: "#ffffff"
+menu-separator-width: 1
+menu-separator-background-color: "#000000"
+
+# Menu arrow
+menu-arrow-color: "#ffffff"
+menu-arrow-background-color: "#000000"
+
+# Menu check
+menu-check-color: "#4d7cf4"
+menu-check-background-color: "#000000"
+
+# Menu check selected
+menu-check-selected-color: "#ffffff"
+menu-check-selected-background-color: "#4d7cf4"
+
+# Menu check disabled
+menu-check-disabled-color: "#666666"
+menu-check-disabled-background-color: "#000000"
+
+# Menu check disabled selected
+menu-check-disabled-selected-color: "#999999"
+menu-check-disabled-selected-background-color: "#333333"

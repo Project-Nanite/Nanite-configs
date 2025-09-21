@@ -1,0 +1,100 @@
+#!/bin/bash
+
+# GRUB Live Environment Setup
+# Configures GRUB boot manager for live environment with custom theme and branding
+
+set -e
+
+echo "I: Setting up GRUB for live environment..."
+
+# Ensure GRUB theme directory exists
+mkdir -p /usr/share/grub/themes/nanite
+
+# Set proper permissions for GRUB theme
+chmod -R 755 /usr/share/grub/themes/nanite
+chmod 644 /usr/share/grub/themes/nanite/theme.txt
+
+# Ensure GRUB background image has proper permissions
+if [ -f /usr/share/backgrounds/nanite-grub.png ]; then
+    chmod 644 /usr/share/backgrounds/nanite-grub.png
+    echo "I: GRUB background image found and permissions set"
+else
+    echo "W: GRUB background image not found at /usr/share/backgrounds/nanite-grub.png"
+fi
+
+# Update GRUB configuration
+if command -v update-grub >/dev/null 2>&1; then
+    echo "I: Updating GRUB configuration..."
+    update-grub
+else
+    echo "W: update-grub command not found"
+fi
+
+# Ensure GRUB custom menu is executable
+if [ -f /etc/grub.d/40_custom ]; then
+    chmod +x /etc/grub.d/40_custom
+    echo "I: GRUB custom menu configured"
+fi
+
+# Create a script to regenerate GRUB config if needed
+cat > /usr/local/bin/update-nanite-grub << 'EOF'
+#!/bin/bash
+
+# Update GRUB configuration for Nanite Linux
+echo "Updating GRUB configuration for Nanite Linux..."
+
+# Ensure theme files exist
+if [ ! -f /usr/share/grub/themes/nanite/theme.txt ]; then
+    echo "Error: GRUB theme not found!"
+    exit 1
+fi
+
+# Update GRUB
+if command -v update-grub >/dev/null 2>&1; then
+    update-grub
+    echo "GRUB configuration updated successfully!"
+else
+    echo "Error: update-grub command not found!"
+    exit 1
+fi
+EOF
+
+chmod +x /usr/local/bin/update-nanite-grub
+
+# Create GRUB theme verification script
+cat > /usr/local/bin/verify-grub-theme << 'EOF'
+#!/bin/bash
+
+# Verify GRUB theme installation
+echo "Verifying GRUB theme installation..."
+
+THEME_DIR="/usr/share/grub/themes/nanite"
+BACKGROUND="/usr/share/backgrounds/nanite-grub.png"
+
+if [ -f "$THEME_DIR/theme.txt" ]; then
+    echo "✓ GRUB theme file found: $THEME_DIR/theme.txt"
+else
+    echo "✗ GRUB theme file missing: $THEME_DIR/theme.txt"
+fi
+
+if [ -f "$BACKGROUND" ]; then
+    echo "✓ GRUB background image found: $BACKGROUND"
+else
+    echo "✗ GRUB background image missing: $BACKGROUND"
+fi
+
+if [ -f "/etc/grub.d/40_custom" ]; then
+    echo "✓ GRUB custom menu found: /etc/grub.d/40_custom"
+else
+    echo "✗ GRUB custom menu missing: /etc/grub.d/40_custom"
+fi
+
+echo "GRUB theme verification completed!"
+EOF
+
+chmod +x /usr/local/bin/verify-grub-theme
+
+echo "I: GRUB live environment setup completed!"
+echo "I: GRUB will show custom theme and branding in live environment"
+echo "I: Use 'update-nanite-grub' to regenerate GRUB config if needed"
+echo "I: Use 'verify-grub-theme' to check theme installation"
