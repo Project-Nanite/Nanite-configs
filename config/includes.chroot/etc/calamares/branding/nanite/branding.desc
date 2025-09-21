@@ -28,7 +28,5 @@ style:
   TextColor: "#ffffff"
   BackgroundImage: "/usr/share/backgrounds/wallpaper.png"
 
-slideshow:
-  slideshow: "/usr/share/calamares/branding/nanite/slideshow/slideshow.qml"
-
+slideshow: "/usr/share/calamares/branding/nanite/slideshow/slideshow.qml"
 

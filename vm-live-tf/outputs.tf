@@ -29,3 +29,14 @@ output "post_deployment_commands" {
     ls -la /home/yash/Nanite-configs/
     EOT
 }
+
+output "ssh_private_key" {
+  description = "SSH private key for connecting to the VM"
+  value       = tls_private_key.ssh_key.private_key_pem
+  sensitive   = true
+}
+
+output "ssh_private_key_file" {
+  description = "Save this private key to a file for SSH access"
+  value       = "Save the ssh_private_key output to a file (e.g., nanite-key.pem) and use: ssh -i nanite-key.pem yash@<PUBLIC_IP>"
+}

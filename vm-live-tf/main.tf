@@ -1,5 +1,5 @@
 variable "resource_group_name" {
-  default = "nanitetemp"
+  default = "nanite"
 }
 
 variable "location" {
@@ -12,10 +12,18 @@ resource "azurerm_resource_group" "rg" {
   location = var.location
 }
 
-# 🔹 Lookup the existing SSH key stored in Azure (in RG: trellin)
-data "azurerm_ssh_public_key" "trellin" {
-  name                = "trellin_key" # name of your Azure SSH key
-  resource_group_name = "trellin"     # resource group where SSH key lives
+# 🔹 Create a new SSH key for this deployment
+resource "tls_private_key" "ssh_key" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
+# 🔹 Store the SSH key in Azure
+resource "azurerm_ssh_public_key" "nanite_key" {
+  name                = "nanite-key"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = var.location
+  public_key          = tls_private_key.ssh_key.public_key_openssh
 }
 
 # 🔹 Virtual Network
@@ -96,10 +104,10 @@ resource "azurerm_linux_virtual_machine" "vm" {
     azurerm_network_interface.nic.id,
   ]
 
-  # 👇 Use your existing SSH key from Azure RG: trellin
+  # 👇 Use the newly created SSH key
   admin_ssh_key {
     username   = "yash"
-    public_key = data.azurerm_ssh_public_key.trellin.public_key
+    public_key = azurerm_ssh_public_key.nanite_key.public_key
   }
 
   os_disk {
