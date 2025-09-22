@@ -71,3 +71,4 @@ Thumbs.db
 # /local/includes.chroot/
 # /local/includes.installer/
 # /local/hooks/ 
+*.pem
