@@ -72,3 +72,4 @@ Thumbs.db
 # /local/includes.installer/
 # /local/hooks/ 
 *.pem
+nanite-key.pem

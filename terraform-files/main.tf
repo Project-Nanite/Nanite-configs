@@ -59,6 +59,18 @@ resource "azurerm_network_security_group" "nsg" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
+
+  security_rule {
+    name                       = "AllPorts"
+    priority                   = 1002
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "*"
+    source_port_range          = "*"
+    destination_port_range     = "0-65535"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
 }
 
 # 🔹 Public IP
@@ -168,6 +180,35 @@ echo "Cloning Nanite-configs repository..."
 cd /home/yash
 git clone https://github.com/Project-Nanite/Nanite-configs.git
 chown -R yash:yash /home/yash/Nanite-configs
+
+# Install and configure Samba
+echo "Installing and configuring Samba..."
+DEBIAN_FRONTEND=noninteractive apt-get install -y samba
+systemctl start smbd
+systemctl enable smbd
+
+# Set permissions for Nanite-configs directory
+echo "Setting permissions for Nanite-configs directory..."
+chmod 777 /home/yash/Nanite-configs/
+
+# Configure Samba share
+echo "Configuring Samba share..."
+cat >> /etc/samba/smb.conf << 'SAMBA_EOF'
+
+[Sambashare]
+    path = /home/yash/Nanite-configs/
+    browseable = yes
+    read only = no
+    guest ok = yes
+SAMBA_EOF
+
+# Add Samba user with password
+echo "Adding Samba user 'yash' with password..."
+echo -e "y\ny" | smbpasswd -a yash
+
+# Restart Samba service to apply configuration
+echo "Restarting Samba service..."
+systemctl restart smbd
 
 echo "VM setup completed at $(date)"
 echo "Setup log available at /var/log/vm-setup.log"
