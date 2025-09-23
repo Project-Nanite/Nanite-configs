@@ -1,0 +1,294 @@
+{
+  "policies": {
+    "DisplayBookmarksToolbar": "always",
+    "DefaultSearchEngine": "DuckDuckGo",
+    "SearchEngines": {
+      "Default": "DuckDuckGo",
+      "PreventInstalls": false,
+      "Remove": ["Google", "Bing", "Amazon.com", "eBay", "Twitter"]
+    },
+    "Homepage": {
+      "URL": "https://nanite.software",
+      "Locked": false,
+      "StartPage": "homepage"
+    },
+    "NewTabPage": false,
+    "OverrideFirstRunPage": "https://nanite.software/welcome",
+    "OverridePostUpdatePage": "https://nanite.software/updates",
+    "DisableTelemetry": true,
+    "DisableFirefoxStudies": true,
+    "DisablePocket": true,
+    "UserMessaging": {
+      "WhatsNew": false,
+      "ExtensionRecommendations": false,
+      "FeatureRecommendations": false,
+      "UrlbarInterventions": false,
+      "SkipOnboarding": true,
+      "MoreFromMozilla": false
+    },
+    "FirefoxHome": {
+      "Search": true,
+      "TopSites": true,
+      "SponsoredTopSites": false,
+      "Highlights": false,
+      "Pocket": false,
+      "SponsoredPocket": false,
+      "Snippets": false,
+      "Locked": false
+    },
+    "Bookmarks": [
+      {
+        "Title": "Nanite Software",
+        "URL": "https://nanite.software",
+        "Favicon": "https://nanite.software/favicon.ico",
+        "Placement": "toolbar",
+        "Folder": "Nanite"
+      },
+      {
+        "Title": "AI & ML Tools",
+        "Placement": "toolbar",
+        "Folder": "AI Tools",
+        "Children": [
+          {
+            "Title": "ChatGPT",
+            "URL": "https://chat.openai.com"
+          },
+          {
+            "Title": "Claude AI",
+            "URL": "https://claude.ai"
+          },
+          {
+            "Title": "Google Bard",
+            "URL": "https://bard.google.com"
+          },
+          {
+            "Title": "Perplexity AI",
+            "URL": "https://perplexity.ai"
+          },
+          {
+            "Title": "Microsoft Copilot",
+            "URL": "https://copilot.microsoft.com"
+          },
+          {
+            "Title": "Anthropic Console",
+            "URL": "https://console.anthropic.com"
+          }
+        ]
+      },
+      {
+        "Title": "Development & ML Platforms",
+        "Placement": "toolbar",
+        "Folder": "ML Platforms",
+        "Children": [
+          {
+            "Title": "Jupyter.org",
+            "URL": "https://jupyter.org"
+          },
+          {
+            "Title": "Google Colab",
+            "URL": "https://colab.research.google.com"
+          },
+          {
+            "Title": "Kaggle",
+            "URL": "https://kaggle.com"
+          },
+          {
+            "Title": "Hugging Face",
+            "URL": "https://huggingface.co"
+          },
+          {
+            "Title": "Papers with Code",
+            "URL": "https://paperswithcode.com"
+          },
+          {
+            "Title": "GitHub",
+            "URL": "https://github.com"
+          },
+          {
+            "Title": "PyPI",
+            "URL": "https://pypi.org"
+          },
+          {
+            "Title": "TensorFlow",
+            "URL": "https://tensorflow.org"
+          },
+          {
+            "Title": "PyTorch",
+            "URL": "https://pytorch.org"
+          }
+        ]
+      },
+      {
+        "Title": "Cloud AI Services",
+        "Placement": "toolbar",
+        "Folder": "Cloud AI",
+        "Children": [
+          {
+            "Title": "AWS SageMaker",
+            "URL": "https://aws.amazon.com/sagemaker"
+          },
+          {
+            "Title": "Google AI Platform",
+            "URL": "https://cloud.google.com/ai-platform"
+          },
+          {
+            "Title": "Azure ML",
+            "URL": "https://azure.microsoft.com/en-us/products/machine-learning"
+          },
+          {
+            "Title": "OpenAI API",
+            "URL": "https://platform.openai.com"
+          },
+          {
+            "Title": "Replicate",
+            "URL": "https://replicate.com"
+          }
+        ]
+      },
+      {
+        "Title": "Learning Resources",
+        "Placement": "toolbar",
+        "Folder": "Learning",
+        "Children": [
+          {
+            "Title": "Coursera ML",
+            "URL": "https://www.coursera.org/browse/data-science/machine-learning"
+          },
+          {
+            "Title": "edX AI Courses",
+            "URL": "https://www.edx.org/learn/artificial-intelligence"
+          },
+          {
+            "Title": "Fast.ai",
+            "URL": "https://fast.ai"
+          },
+          {
+            "Title": "Towards Data Science",
+            "URL": "https://towardsdatascience.com"
+          },
+          {
+            "Title": "arXiv ML",
+            "URL": "https://arxiv.org/list/cs.LG/recent"
+          },
+          {
+            "Title": "Distill.pub",
+            "URL": "https://distill.pub"
+          }
+        ]
+      },
+      {
+        "Title": "Data & Visualization",
+        "Placement": "toolbar",
+        "Folder": "Data Tools",
+        "Children": [
+          {
+            "Title": "Observable",
+            "URL": "https://observablehq.com"
+          },
+          {
+            "Title": "Tableau Public",
+            "URL": "https://public.tableau.com"
+          },
+          {
+            "Title": "Plotly",
+            "URL": "https://plotly.com"
+          },
+          {
+            "Title": "Weights & Biases",
+            "URL": "https://wandb.ai"
+          },
+          {
+            "Title": "MLflow",
+            "URL": "https://mlflow.org"
+          }
+        ]
+      }
+    ],
+    "Preferences": {
+      "browser.newtabpage.activity-stream.feeds.recommendationprovider": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.newtabpage.activity-stream.feeds.section.highlights": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.newtabpage.activity-stream.feeds.snippets": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.newtabpage.activity-stream.feeds.topsites": {
+        "Value": true,
+        "Status": "default"
+      },
+      "browser.newtabpage.activity-stream.showSponsored": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.newtabpage.activity-stream.showSponsoredTopSites": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.search.suggest.enabled": {
+        "Value": true,
+        "Status": "default"
+      },
+      "browser.urlbar.suggest.searches": {
+        "Value": true,
+        "Status": "default"
+      },
+      "extensions.pocket.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "datareporting.healthreport.uploadEnabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "datareporting.policy.dataSubmissionEnabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "toolkit.telemetry.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "app.shield.optoutstudies.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "sidebar.verticalTabs": {
+        "Value": true,
+        "Status": "default"
+      },
+      "browser.tabs.inTitlebar": {
+        "Value": 0,
+        "Status": "default"
+      },
+      "browser.compactmode.show": {
+        "Value": true,
+        "Status": "default"
+      },
+      "browser.uidensity": {
+        "Value": 1,
+        "Status": "default"
+      },
+      "toolkit.legacyUserProfileCustomizations.stylesheets": {
+        "Value": true,
+        "Status": "default"
+      },
+      "browser.tabs.drawInTitlebar": {
+        "Value": false,
+        "Status": "default"
+      },
+      "browser.theme.content-theme": {
+        "Value": 0,
+        "Status": "default"
+      },
+      "browser.theme.toolbar-theme": {
+        "Value": 0,
+        "Status": "default"
+      }
+    }
+  }
+}
